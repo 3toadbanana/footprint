@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
           theme: ThemeData(
             colorScheme: ColorScheme(
               brightness: isDarkMode ? Brightness.dark : Brightness.light,
-              primary: Colors.green,
+              primary: Colors.white,
               onPrimary: Colors.lightGreen,
               secondary: Colors.blue,
               onSecondary: Colors.blueAccent,
