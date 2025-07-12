@@ -27,9 +27,16 @@ class _MyAppState extends State<MyApp> {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.lime,
+            colorScheme: ColorScheme(
               brightness: isDarkMode ? Brightness.dark : Brightness.light,
+              primary: Colors.green,
+              onPrimary: Colors.lightGreen,
+              secondary: Colors.blue,
+              onSecondary: Colors.blueAccent,
+              error: Colors.red,
+              onError: Colors.redAccent,
+              surface: Color(0xFF243238),
+              onSurface: Colors.white,
             ),
           ),
           home: WidgetTree(),

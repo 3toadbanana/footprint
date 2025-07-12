@@ -14,43 +14,14 @@ class WidgetTree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Footprint"),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {
-              isDarkModeNotifier.value = !isDarkModeNotifier.value;
-            },
-            icon: ValueListenableBuilder(
-              valueListenable: isDarkModeNotifier,
-              builder: (context, isDarkMode, child) {
-                return Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode);
-              },
-            ),
-          ),
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return SettingsPage();
-                  },
-                ),
-              );
-            },
-            icon: Icon(Icons.settings),
-          ),
-        ],
+      body: SafeArea(
+        child: ValueListenableBuilder(
+          valueListenable: selectedPageNotifier,
+          builder: (context, selectedPage, child) {
+            return pages.elementAt(selectedPage);
+          },
+        ),
       ),
-      body: ValueListenableBuilder(
-        valueListenable: selectedPageNotifier,
-        builder: (context, selectedPage, child) {
-          return pages.elementAt(selectedPage);
-        },
-      ),
-      bottomNavigationBar: NavbarWidget(),
     );
   }
 }
