@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:footprint/views/pages/profile_page.dart';
 
 class Signup2Page extends StatefulWidget {
   const Signup2Page({super.key});
@@ -78,6 +79,14 @@ class _Signup2PageState extends State<Signup2Page> {
                       foregroundColor: Colors.white,
                     ),
                     onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ProfilePage();
+                          },
+                        ),
+                      );
                       // create account and take to profile page
                     },
                     child: Text(

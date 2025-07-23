@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:footprint/data/notifiers.dart';
 import 'package:footprint/views/widget_tree.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
@@ -44,4 +45,19 @@ class _MyAppState extends State<MyApp> {
       },
     );
   }
+}
+
+Route fadeRoute(Widget child) {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => child,
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      final controller = AnimationController(
+        vsync: this,
+        duration: Duration(seconds: 1),
+      );
+      final animation = Tween(begin: 0.0, end: 1.0).animate(controller);
+      controller.forward();
+      return FadeTransition(opacity: animation);
+    },
+  );
 }

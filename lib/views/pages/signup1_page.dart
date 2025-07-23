@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:footprint/main.dart';
 import 'package:footprint/views/pages/login.dart';
 import 'package:footprint/views/pages/signup2_page.dart';
 
@@ -14,6 +15,7 @@ class _Signup1PageState extends State<Signup1Page> {
   TextEditingController firstnameController = TextEditingController();
   TextEditingController lastnameController = TextEditingController();
   TextEditingController usernameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,14 +58,7 @@ class _Signup1PageState extends State<Signup1Page> {
                         width: 140,
                         child: OutlinedButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return LoginPage();
-                                },
-                              ),
-                            );
+                            Navigator.push(context, fadeRoute(LoginPage()));
                           },
                           style: OutlinedButton.styleFrom(
                             backgroundColor: Color(0xff40515D),

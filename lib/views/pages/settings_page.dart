@@ -74,6 +74,111 @@ class _SettingsPageState extends State<SettingsPage> {
                   });
                 },
               ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+                onEditingComplete: () {
+                  setState(() {});
+                },
+              ),
             ],
           ),
         ),
